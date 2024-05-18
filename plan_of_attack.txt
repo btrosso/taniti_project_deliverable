@@ -1,0 +1,23 @@
+Pages:
+Landing/Home
+About the island
+lodging
+entertainment
+restaurants
+transportation
+review
+
+
+tropical colors:
+7BD3EA - blue
+A1EEBD - green
+F6F7C4 - yellow
+F6D6D6 - pink
+
+
+
+beachside
+rainforest
+volcano
+fishing 
+snorkeling

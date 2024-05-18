@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- section dedicated to the nav bar elements -->
+    <nav></nav>
+
+    <div class="main-container">
+      <div id="contact-container">
+        <div id="tropical_paradise">
+          <img
+            id="tropical_paradise_img"
+            src="tropical_flower.jpg"
+            alt="tropical underwater paradise"
+            title="(Stockcake, n.d.-aa)"
+          />
+        </div>
+
+        <div class="form-container">
+          <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="John Doe"
+              required
+            />
+
+            <label for="star-rating">Rate Your Experience:</label>
+            <div class="star-rating">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+
+            <label for="comments">Comments:</label>
+            <textarea
+              id="comments"
+              name="comments"
+              placeholder="Share your experience..."
+              required
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer to contain the small logo, copyright, and additional links -->
+    <footer></footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="load_nav.js"></script>
+    <script src="load_header.js"></script>
+    <script src="load_footer.js"></script>
+    <script src="update_stars.js"></script>
+  </body>
+</html>
