@@ -26,14 +26,14 @@
             <label for="name">Name:</label>
             <input
               type="text"
-              id="name"
+              id="form-name"
               name="name"
               placeholder="John Doe"
               required
             />
 
             <label for="star-rating">Rate Your Experience:</label>
-            <div class="star-rating">
+            <div class="star-rating" id="form-star-rating">
               <span class="star" data-value="1">&#9733;</span>
               <span class="star" data-value="2">&#9733;</span>
               <span class="star" data-value="3">&#9733;</span>
@@ -43,15 +43,22 @@
 
             <label for="comments">Comments:</label>
             <textarea
-              id="comments"
+              id="form-comments"
               name="comments"
               placeholder="Share your experience..."
               required
             ></textarea>
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" onclick="submitForm(event)" />
           </form>
         </div>
+      </div>
+    </div>
+
+    <div id="modal-container" class="modal-container hidden">
+      <div id="modal-content" class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Your submission has been recorded.</p>
       </div>
     </div>
 
@@ -63,5 +70,47 @@
     <script src="load_header.js"></script>
     <script src="load_footer.js"></script>
     <script src="update_stars.js"></script>
+    <script>
+      function submitForm(event) {
+        event.preventDefault()
+
+        // Display the modal
+        var modal = document.getElementById('modal-container')
+        modal.style.display = 'block'
+
+        // Reset the form after a delay
+        setTimeout(function () {
+          var name = document.getElementById('form-name')
+          name.value = ''
+          var stars = document.querySelectorAll('.star')
+          stars.forEach(function (star) {
+            if (star.classList.contains('filled')) {
+              star.classList.remove('filled')
+            }
+          })
+          var comment = document.getElementById('form-comments')
+          comment.value = ''
+          modal.style.display = 'none' // Hide the modal after reset
+        }, 3000) // Adjust the delay (in milliseconds) as needed
+      }
+    </script>
+    <script>
+      function closeModal() {
+        var modal = document.getElementById('modal-container')
+        modal.style.display = 'none' // Hide the modal
+
+        // Reset the form fields
+        var name = document.getElementById('form-name')
+        name.value = ''
+        var stars = document.querySelectorAll('.star')
+        stars.forEach(function (star) {
+          if (star.classList.contains('filled')) {
+            star.classList.remove('filled')
+          }
+        })
+        var comment = document.getElementById('form-comments')
+        comment.value = ''
+      }
+    </script>
   </body>
 </html>
