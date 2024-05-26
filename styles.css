@@ -33,12 +33,12 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
   margin: 0;
 }
 
 .main-container {
-  flex: 1; 
+  flex: 1;
 }
 
 #big-picture {
@@ -56,29 +56,28 @@ body {
 }
 
 .image-container {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .large-image {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-
 .overlay-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .info-paragraph {
@@ -185,18 +184,18 @@ h3 {
 }
 
 .star-rating {
-    display: flex;
-    gap: 5px;
-    font-size: 2rem;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 5px;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .star {
-    color: lightgray;
+  color: lightgray;
 }
 
 .star.filled {
-    color: orange;
+  color: orange;
 }
 
 .card-image {
@@ -206,6 +205,20 @@ h3 {
 
 li {
   font-size: larger;
+}
+
+.boldthis {
+  font-weight: 1000;
+}
+
+.entertainment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+}
+
+.entertainment-list li:hover {
+  color: #03c9fa;
 }
 
 /* --- FOOTER SECTION --- */
@@ -238,7 +251,6 @@ footer {
   width: 300px;
   height: 100px;
 }
-
 
 /* Form Section */
 #contact-container {
@@ -288,69 +300,74 @@ input[type='submit']:hover {
   background-color: #6699cc;
 }
 
+span[class='star filled'],
+span[class='star']:hover {
+  cursor: pointer;
+}
+
 textarea {
-    resize: vertical;
-    min-height: 300px;
-    min-width: 600px;
-    margin-bottom: 20px;
+  resize: vertical;
+  min-height: 300px;
+  min-width: 600px;
+  margin-bottom: 20px;
 }
 
 /* Button Styles */
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .book-now {
-    background-color: #7BD3EA;
+  background-color: #7bd3ea;
 }
 
 .book-now:hover {
-    background-color: #63AACD;
+  background-color: #63aacd;
 }
 
 .reserve-spot {
-    background-color: #A1EEBD;
+  background-color: #a1eebd;
 }
 
 .reserve-spot:hover {
-    background-color: #81C29E;
+  background-color: #81c29e;
 }
 
 .reserve-table {
-    background-color: #FFA500;
+  background-color: #ffa500;
 }
 
 .reserve-table:hover {
-    background-color: #E59400;
+  background-color: #e59400;
 }
 
 .btn-yellow {
-    background-color: #F6F7C4;
-    color: #333;
+  background-color: #f6f7c4;
+  color: #333;
 }
 
 .btn-yellow:hover {
-    background-color: #E0E3A6;
+  background-color: #e0e3a6;
 }
 
 .btn-pink {
-    background-color: #F6D6D6;
-    color: #333;
+  background-color: #f6d6d6;
+  color: #333;
 }
 
 .btn-pink:hover {
-    background-color: #E0B4B4;
+  background-color: #e0b4b4;
 }
 
 /* Style for the modal container */
